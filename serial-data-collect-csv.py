@@ -2,8 +2,6 @@
 """
 Serial Data Collection CSV
 
-EDITING JUST TO SEE IF IT WORKS
-
 Collects raw data in CSV form over a serial connection and saves them to files.
 
 Install dependencies:
@@ -24,6 +22,8 @@ The end of the sample should contain an empty line (e.g. \r\n\r\n).
 Call this script as follows:
 
     python serial-data-collect-csv.py
+
+    python serial-data-collect-csv.py -p COM8 -b 115200 -d dataset -l flat-normal
     
 Author: Shawn Hymel (EdgeImpulse, Inc.)
 Date: June 17, 2022
@@ -48,10 +48,12 @@ def write_csv(data, dir, label):
     # Keep trying if the file exists
     exists = True
     while exists:
-
+        ##print("START")
         # Unique ID is epoch time in ms
-        uid = str(round(time.time() * 1000))
+        uid = str(round(time.time() * 100))
         filename = label + "." + uid + ".csv"
+        ##print("Successfully created")
+        ##time.sleep(3)
         
         # Create and write to file if it does not exist
         out_path = os.path.join(dir, filename)
