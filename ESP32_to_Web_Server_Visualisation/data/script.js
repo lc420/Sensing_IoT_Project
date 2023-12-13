@@ -105,7 +105,7 @@ if (!!window.EventSource) {
 
   source.addEventListener('force_reading', function(e) {
     console.log("force_reading", e.data);
-    document.getElementById("force").innerHTML = e.data;
+    document.getElementById("force_value").innerHTML = e.data;
   }, false);
 
   source.addEventListener('flex_reading', function(e) {

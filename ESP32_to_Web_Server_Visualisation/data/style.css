@@ -88,3 +88,14 @@ body {
   max-height: 60px;
   vertical-align: middle;
 }
+
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap if they exceed the width */
+}
+
+.side-by-side .card,
+.side-by-side .cube-content {
+  flex: 1; /* Each element takes up equal space */
+  margin-right: 10px; /* Adjust the spacing between elements */
+}

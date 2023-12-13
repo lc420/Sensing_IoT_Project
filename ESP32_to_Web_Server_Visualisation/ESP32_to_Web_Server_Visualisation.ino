@@ -36,6 +36,7 @@ unsigned long lastTime = 0;
 unsigned long lastTimeTemperature = 0;
 unsigned long lastTimeAcc = 0;
 unsigned long gyroDelay = 1000;
+unsigned long gyroDelayFast = 50;
 unsigned long temperatureDelay = 1000;
 unsigned long accelerometerDelay = 1000;
 
@@ -54,13 +55,13 @@ float gyroYerror = 0.03;
 float gyroZerror = 0.01;
 
 
-int fsrPin = 33;    // select the input pin for the potentiometer
+int fsrPin = 32;    // select the input pin for the potentiometer
 int avg_size = 10; // number of analog readings to average
 float R_0 = 4700.0; // known resistor value in [Ohms]
 float Vcc = 3.3; // supply voltage
 float force_value;
 
-const int flexPin = 32; //pin A0 to read analog input
+const int flexPin = 33; //pin A0 to read analog input
 float flex; 
 
 // Init MPU6050
@@ -134,22 +135,15 @@ String getAccReadings() {
   return accString;
 }
 
-String getTemperature(){
-  mpu.getEvent(&a, &g, &temp);
-  temperature = temp.temperature;
-  return String(temperature);
-}
-
-
 String getForce(){
   force_value = analogRead(fsrPin);  
-  force_value = map(force_value, 0, 1023, 100, 0);//Map value 0-1023 to 0-255 (PWM)  
+  force_value = map(force_value, 0, 4095, 0, 100);//Map value 0-1023 to 0-255 (PWM)       
   return String(force_value);
 }
 
 String getFlex(){
   flex = analogRead(flexPin);         //Read and save analog value from potentiometer      
-  flex = map(flex, 0, 1023, 100, 0);//Map value 0-1023 to 0-255 (PWM)       
+  flex = map(flex, 0, 4095, 100, 0);//Map value 0-1023 to 0-255 (PWM)       
   return String(flex);
 }
 
@@ -210,7 +204,7 @@ void setup() {
 }
 
 void loop() {
-  if ((millis() - lastTime) > gyroDelay) {
+  if ((millis() - lastTime) > gyroDelayFast) {
     // Send Events to the Web Server with the Sensor Readings
     events.send(getGyroReadings().c_str(),"gyro_readings",millis());
     lastTime = millis();
