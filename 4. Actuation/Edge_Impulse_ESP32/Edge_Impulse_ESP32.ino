@@ -1,4 +1,4 @@
-
+// This is the code of how I would have done live inference with the Arduino Library I generated from Edge Impulse. I tried many different ways but I couldn't upload it, but this file shows how it would have been deployed with a different hardware
 
 ///// LIBRARIES
 #include <Wire.h>
