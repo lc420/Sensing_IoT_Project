@@ -4,9 +4,9 @@ Pointe Shoe IoT End to End System, by Laura Bastos.
 # Structure 
 
 1. Sensing: Arduino files (IMU, force sensor, flex sensor) 
-2. Data collection: Python file (turns data into CSVs) and collected data
-3. Data analysis: Google Colab (graphs, corrolations, data processing)
-4. Machine learning: Edge Impulse implemented on Arduino, Tensor Flow Lite
+2. Data collection and analysis: Python file (turns data into CSVs), collected data Google Colab (graphs, corrolations, data processing)
+3. Machine learning: Edge Impulse implemented on Arduino, Tensor Flow Lite
+4. Actuation: Wifi communication between ESP32s and light grid
 5. Visualisation: HTML, CSS and Javascript (3D visualisations and charts) 
 
 # Video Presentation
