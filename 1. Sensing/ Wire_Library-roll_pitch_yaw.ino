@@ -1,6 +1,5 @@
 //combining all sensors
 
-
 ///// LIBRARIES
 #include <Wire.h>
 
