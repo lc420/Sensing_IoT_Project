@@ -5,7 +5,7 @@
 
 #define SAMPLING_FREQ_HZ    100                       // Sampling frequency (Hz)
 #define SAMPLING_PERIOD_MS  1000 / SAMPLING_FREQ_HZ   // Sampling period (ms) 10 ms between samples
-#define NUM_SAMPLES         1000                       // 1000 samples at 100 Hz is 3s in total
+#define NUM_SAMPLES         1000                       // 1000 samples at 100 Hz is 10s in total
 
 /////// VARIABLES
 const int MPU = 0x68; // MPU6050 I2C address
@@ -187,12 +187,12 @@ void IMU_calculations () {
 
 void force_sensor() {
   force_value = analogRead(fsrPin);  
-  force_value = map(force_value, 0, 4095, 0, 100);//Map value 0-1023 to 0-255 (PWM)       
+  force_value = map(force_value, 0, 4095, 0, 100);//Map value 0-4095 to 0-100     
 }
 
 void flex_sensor (){
   flex = analogRead(flexPin);         //Read and save analog value from potentiometer      
-  flex = map(flex, 0, 4095, 0, 100);//Map value 0-1023 to 0-255 (PWM)       
+  flex = map(flex, 0, 4095, 0, 100);//Map value 0-4095 to 0-100   
 }
 
 void data_output () { 
