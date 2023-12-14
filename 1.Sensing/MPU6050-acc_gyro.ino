@@ -7,16 +7,16 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 
-
 Adafruit_MPU6050 mpu;
 
-//const char *ssid = "Hyperoptic Fibre A2C0";
-//const char *password = "UNz2PhQXy36YG9";
+// Removed my wifi credentials
+//const char *ssid = " ";
+//const char *password = " ";
 
 
-#define SAMPLING_FREQ_HZ    260                       // Sampling frequency (Hz)
+#define SAMPLING_FREQ_HZ    100                       // Sampling frequency (Hz)
 #define SAMPLING_PERIOD_MS  1000 / SAMPLING_FREQ_HZ   // Sampling period (ms) 10 ms between samples
-#define NUM_SAMPLES         119                       // 300 samples at 100 Hz is 3s in total
+#define NUM_SAMPLES         300                       // 300 samples at 100 Hz is 3s in total
 
 /////// VARIABLES
 const int MPU = 0x68; // MPU6050 I2C address
@@ -41,8 +41,6 @@ const int flexPin = 33; //pin A0 to read analog input
 float flex; 
 
 int samples = 0;
-
-
 
 
 void setup() {
