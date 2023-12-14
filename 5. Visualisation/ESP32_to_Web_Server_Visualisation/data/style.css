@@ -1,0 +1,101 @@
+/*
+  Rui Santos
+  Complete project details at https://RandomNerdTutorials.com/esp32-mpu-6050-web-server/
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files.
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
+html {
+  font-family: Arial;
+  display: inline-block;
+  text-align: center;
+}
+p {
+  font-size: 1.2rem;
+}
+body {
+  margin: 0;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #FFC0CB;
+  color: #FEFCFB;
+  font-size: 1rem;
+  align-items: center;
+
+}
+.content {
+  padding: 20px;
+}
+.card {
+  background-color: white;
+  box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+}
+.card-title {
+  color:#FFB6C1;
+  font-weight: bold;
+}
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid; grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.reading {
+  font-size: 1.2rem;
+}
+.cube-content{
+  width: 100%;
+  background-color: white;
+  height: 300px; margin: auto;
+  padding-top:2%;
+}
+#reset{
+  border: none;
+  color: #FEFCFB;
+  background-color: #003366;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px; width: 150px;
+  border-radius: 4px;
+}
+#resetX, #resetY, #resetZ{
+  border: none;
+  color: #FEFCFB;
+  background-color: #003366;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  width: 20px;
+  border-radius: 4px;
+}
+
+
+
+.chart-container {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.shoe-icon {
+  filter: invert(100%);
+  max-width: 60px;
+  max-height: 60px;
+  vertical-align: middle;
+}
+
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap if they exceed the width */
+}
+
+.side-by-side .card,
+.side-by-side .cube-content {
+  flex: 1; /* Each element takes up equal space */
+  margin-right: 10px; /* Adjust the spacing between elements */
+}
