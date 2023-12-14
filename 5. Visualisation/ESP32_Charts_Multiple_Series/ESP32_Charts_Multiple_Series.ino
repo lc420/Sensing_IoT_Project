@@ -15,9 +15,9 @@ call /*********
 #include <Arduino_JSON.h>
 #include "SPIFFS.h"
 
-// Replace with your network credentials
-const char *ssid = "Hyperoptic Fibre A2C0";
-const char *password = "UNz2PhQXy36YG9";
+// Removed network credentials
+const char *ssid = " ";
+const char *password = " ";
 
 
 // Create AsyncWebServer object on port 80
