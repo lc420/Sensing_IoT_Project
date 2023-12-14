@@ -1,7 +1,8 @@
 #include <WiFi.h>
 
-const char *ssid = "Hyperoptic Fibre A2C0";
-const char *password = "UNz2PhQXy36YG9";
+// Removed wifi credentials
+const char *ssid = " ";
+const char *password = " ";
 int ledPin1 = 2; // Pin for LED if number < 5
 int ledPin2 = 3; // Pin for LED if number > 10
 
