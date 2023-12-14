@@ -19,8 +19,8 @@
 #include "SPIFFS.h"
 
 // Replace with your network credentials
-const char *ssid = "Hyperoptic Fibre A2C0";
-const char *password = "UNz2PhQXy36YG9";
+const char *ssid = " ";
+const char *password = " ";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
