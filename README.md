@@ -11,8 +11,9 @@ Pointe Shoe IoT End to End System, by Laura Bastos.
 
 # Video Presentation
 
-https://www.loom.com/embed/db6d016966c140aab330a4ecc363e96b?sid=b66ab18a-3d26-4e86-bdd5-f8763c81d7e9
-Downloaded video also available in this repository
+https://www.loom.com/embed/db6d016966c140aab330a4ecc363e96b?sid=b66ab18a-3d26-4e86-bdd5-f8763c81d7e9](https://www.loom.com/share/5314135043c74be8a5b65045607a2951?sid=4d035ffe-089c-4343-bda1-5efec03dbc0b)
+
+Compressed video also available in this repository
 
 # Presentation slides 
 
