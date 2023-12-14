@@ -1,8 +1,9 @@
 //Libraries
 #include <WiFi.h>
 
-const char *ssid = "Hyperoptic Fibre A2C0";
-const char *password = "UNz2PhQXy36YG9";
+// Removed my wifi credentials
+const char *ssid = " ";
+const char *password = " ";
 const char* host = "192.168.1.125";  // Slave's IP address
 
 void setup() {
