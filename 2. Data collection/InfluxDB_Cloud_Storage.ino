@@ -8,6 +8,7 @@
   #define DEVICE "ESP8266"
 #endif
 
+
 #include <Wire.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
@@ -17,10 +18,11 @@ Adafruit_MPU6050 mpu;
 #include <InfluxDbClient.h>
 #include <InfluxDbCloud.h>
 
+// Removed my wifi credentials
 // WiFi AP SSID
-#define WIFI_SSID "Hyperoptic Fibre A2C0"
+#define WIFI_SSID " "
 // WiFi password
-#define WIFI_PASSWORD "UNz2PhQXy36YG9"
+#define WIFI_PASSWORD " "
 
 #define INFLUXDB_URL "https://eu-central-1-1.aws.cloud2.influxdata.com"
 #define INFLUXDB_TOKEN "n3j4dkSPVLsNKoHw_akmxKzpzmAwLbUqftzMnBmW5ifg2jCgQPddO3AvQYMZxXBWUDPnnON58PqKgeUX2KCQrQ=="
